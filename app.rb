@@ -21,12 +21,13 @@ post('/') do
   erb(:word_input)
 end
 
-get('/word/:word') do
-  @word_list = []
-  @inputted_word = params.fetch("word_input")
-  erb(:definition_input)
-end
+# get('/word/:word') do
+#   @word_list = []
+#   @inputted_word = params.fetch("word_input")
+#   erb(:definition_input)
+# end
 
 post('/word/defioitions') do
-  
+  album = params("album_input")
+  erb(:definition_input)
 end
