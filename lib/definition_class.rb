@@ -13,5 +13,4 @@ class Definition
   def self_list
     @@list
   end
-
 end
