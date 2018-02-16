@@ -12,10 +12,9 @@ get('/') do
 end
 
 post('/') do
-  word = params("word_input")
+  word = params["word_input"]
   word_value = Word.new({:term => word})
   word_value.populate_list()
-  Word.sort_list
   list_of_words = Word.list
   @word_list = list_of_words
   erb(:word_input)
