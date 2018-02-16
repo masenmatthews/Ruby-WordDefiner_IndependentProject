@@ -19,11 +19,12 @@ describe('Word') do
     end
   end
 
-  describe('#add_definition') do
-    it('adds new definition for inputted word') do
-      word = Word.new({:term => 'Dog', :definitions => "A soft, friendly animal"})
-      inputted_album = word.add_definition({:word => "Dog", :definitions => "A soft, friendly animal"})
-      expect(word.definitions).to(eq([inputted_album]))
-      end
-    end
+  # describe('#add_definition') do
+  #   it('adds new definition for inputted word') do
+  #     word = Word.new({:term => 'Dog'})
+  #     inputted_word = word.add_definition({:definitions => ["A soft, friendly animal"]})
+  #     binding.pry
+  #     expect(term.Definition).to(eq([inputted_word]))
+  #     end
+  #   end
 end
