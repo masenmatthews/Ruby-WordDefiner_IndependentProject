@@ -8,6 +8,19 @@
 
 This application allows the user to enter words into a text field, which will populate a list and allow the user to enter definitions for the different terms. The main goal of the application is to allow children to learn vocabulary terms and hone their understanding of the English language.
 
+## Specifications
+1. App takes inputted word from user and displays it in a list
+  * Input example: "Dog"
+  * Output example: "Dog" (in list)
+
+2. Word inputted in first step is clickable and navigates to its own page.
+  * Input example: Click "Dog"
+  * Output example: Browser navigates to new "Dog" specific page
+
+3. New page features an input field for term definitions
+  * Input example: "Dogs are soft, fluffy, four-legged pets."
+  * Output example: Definition printed on new oage
+
 ## Setup/Installation Requirements
 
 * _Clone GitHub repository to desktop or desired directory_
