@@ -11,7 +11,10 @@
   </div>
   <div id="output">
     <h3>Definition(s):</h3><br>
-
+    
+    <% @definition_list.each do |x| %>
+      <h4><%= x.term %></h4>
+      <% end %>
 
   </div>
 </form>

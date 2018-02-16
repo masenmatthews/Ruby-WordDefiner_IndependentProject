@@ -28,6 +28,15 @@ get('/word_input/:term') do
   erb(:definition_input)
 end
 
+post("/definitions") do
+  definitions_value = params("definition_input")
+  definition_value = Word.new({:term => definition})
+  definitions_value.populate.list
+  list_of_definitions = Word.list
+  @definitions_list = list_of_definitions
+  erb(:definition_input)
+end
+
 post('/clear') do
   Word.clear
   redirect '/'
