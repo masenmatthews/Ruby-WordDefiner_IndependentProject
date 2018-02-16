@@ -1,0 +1,21 @@
+<div class="jumbotron">
+  <h1>Word Definer</h1>
+</div>
+
+<form action="/" method="post">
+  <div class="form-group">
+    <h2>Input word</h2>
+    <input name="word_input" class="form-control" type="text" placeholder= "Enter word"><br>
+    <button type="add_word" class="btn btn-primary">Add word</button>
+    <button class="btn btn-primary" id="clear" formaction='/clear'>Clear</button>
+  </div>
+  <div id="output">
+    <h2>Words:</h2><br>
+
+    <!-- <% @artist_list.each do |x| %>
+      <h4><a href="/artist/<%= x.name %>"><%= x.name %></a></h4>
+
+    <% end %> -->
+
+  </div>
+</form>
