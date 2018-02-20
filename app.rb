@@ -29,11 +29,11 @@ get('/word_input/:term') do
 end
 
 post("/definitions") do
-  definitions_value = params("definition_input")
+  definition = params["add_def"]
   definition_value = Word.new({:term => definition})
-  definitions_value.populate.list
+  definition_value.populate.list()
   list_of_definitions = Word.list
-  @definitions_list = list_of_definitions
+  @word_list = list_of_definitions
   erb(:definition_input)
 end
 

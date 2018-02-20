@@ -5,13 +5,13 @@
 <form action="/definitions" method="post">
   <div class="form-group">
     <h2>Input word definition(s)</h2>
-    <input name="definition_input" class="form-control" type="text" placeholder= "Enter definition"><br>
-    <button type="add_definition" class="btn btn-primary">Add definition</button>
+    <input name="add_def" class="form-control" type="text" placeholder= "Enter definition"><br>
+    <button type="add_def_button" class="btn btn-primary">Add definition</button>
     <button class="btn btn-primary" id="clear" formaction='/clear'>Clear</button>
   </div>
   <div id="output">
     <h3>Definition(s):</h3><br>
-    
+
     <% @definition_list.each do |x| %>
       <h4><%= x.term %></h4>
       <% end %>
