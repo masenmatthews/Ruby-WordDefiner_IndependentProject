@@ -2,11 +2,11 @@
   <h1>Definitions</h1>
 </div>
 
-<form action="/definitions" method="post">
+<form action="/definitions/:id" method="post">
   <div class="form-group">
     <h2>Input word definition(s)</h2>
-    <input name="add_def" class="form-control" type="text" placeholder= "Enter definition"><br>
-    <button type="add_def_button" class="btn btn-primary">Add definition</button>
+    <input name="add_definition" class="form-control" type="text" placeholder= "Enter definition"><br>
+    <button type="add_definition" class="btn btn-primary">Add definition</button>
     <button class="btn btn-primary" id="clear" formaction='/clear'>Clear</button>
   </div>
   <div id="output">

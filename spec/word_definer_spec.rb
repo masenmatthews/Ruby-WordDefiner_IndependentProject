@@ -11,7 +11,7 @@ describe('Word') do
       end
     end
 
-  describe('#populate_list') do
+  describe('#populate') do
     it('populates list with inputted term') do
       word = Word.new({:term => 'Dog'})
       word.populate_list
@@ -19,12 +19,5 @@ describe('Word') do
     end
   end
 
-  # describe('#add_definition') do
-  #   it('adds new definition for inputted word') do
-  #     word = Word.new({:term => 'Dog'})
-  #     inputted_word = word.add_definition({:definitions => ["A soft, friendly animal"]})
-  #     binding.pry
-  #     expect(term.Definition).to(eq([inputted_word]))
-  #     end
-  #   end
+
 end
