@@ -6,14 +6,14 @@ require('pry')
 describe('Word') do
   describe('#initalize') do
       it('initializes new object under Word class') do
-        word = Word.new({:term => 'Dog'})
-        expect(word.term).to(eq('Dog'))
+        word = Word.new({:word => 'Dog'})
+        expect(word.word).to(eq('Dog'))
       end
     end
 
-  describe('#populate') do
+  describe('#save') do
     it('populates list with inputted term') do
-      word = Word.new({:term => 'Dog'})
+      word = Word.new({:word => 'Dog'})
       word.populate_list
        expect(Word.list()).to(eq([word]))
     end

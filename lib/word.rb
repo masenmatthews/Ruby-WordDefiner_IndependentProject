@@ -8,8 +8,8 @@ class Word
     @id = @@list.length + 1
   end
 
-  def populate
-    if (self.term)
+  def save
+    if (self.word)
       @@list.push(self)
     end
   end
@@ -28,11 +28,12 @@ class Word
     @@list.clear
   end
 
-  def self.find(id)
-    word_id = id.to_i()
-    @@list.each do |item|
-      if word_id == item_id
-      return word
+    def self.find(id)
+      item_id = id.to_i()
+      @@list.each do |item|
+        if item_id == item_id
+        return id
+      end
     end
   end
 end
