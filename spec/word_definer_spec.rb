@@ -1,6 +1,5 @@
 require('rspec')
-require('word_class')
-require('definition_class')
+require('word')
 require('pry')
 
 describe('Word') do
@@ -14,7 +13,7 @@ describe('Word') do
   describe('#save') do
     it('populates list with inputted term') do
       word = Word.new({:word => 'Dog'})
-      word.populate_list
+      word.save
        expect(Word.list()).to(eq([word]))
     end
   end

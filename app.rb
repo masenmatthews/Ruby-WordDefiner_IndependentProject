@@ -21,21 +21,21 @@ post('/') do
   erb(:homepage)
 end
 
-post("/definitions/:id") do
-  definition = params["add_definition"]
-  definition_value = Word.new({:word => definition})
-  definition_value.save()
-  list_of_definitions = Word.list
-  @word_list = list_of_definitions
-  erb(:definition_input)
-end
-
 # should be functional
 get("/definitions/:id")  do
   @item = Word.find(params[:id])
   erb(:definition_input)
 end
 # should be functional
+
+post("/definitions/:id") do
+  definition = params["add_definition"]
+  definition_value = Word.new({:word => word})
+  definition_value.save()
+  list_of_definitions = Word.list
+  @definition_list = list_of_definitions
+  erb(:definition_input)
+end
 
 # functional - clears page #
 post('/clear') do
