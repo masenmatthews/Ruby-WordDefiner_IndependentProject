@@ -9,12 +9,11 @@
     <button type="add_definition" class="btn btn-primary">Add definition</button>
     <button class="btn btn-primary" id="clear" formaction='/clear'>Clear</button>
   </div>
+
   <div id="output">
     <h3>Definition(s):</h3><br>
-
     <% @definition_list.each do |item| %>
       <h4><%= item.word %></h4>
       <% end %>
-
   </div>
 </form>

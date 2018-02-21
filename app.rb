@@ -23,6 +23,7 @@ end
 
 # should be functional
 get("/definitions/:id")  do
+  @definition_list = Word.list
   @item = Word.find(params[:id])
   erb(:definition_input)
 end
@@ -33,7 +34,7 @@ post("/definitions/:id") do
   definition_value = Word.new({:word => word})
   definition_value.save()
   list_of_definitions = Word.list
-  @definition_list = list_of_definitions
+  @definitions_list = list_of_definitions
   erb(:definition_input)
 end
 
