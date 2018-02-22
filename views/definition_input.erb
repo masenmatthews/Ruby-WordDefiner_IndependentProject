@@ -1,5 +1,5 @@
 <div class="jumbotron">
-  <h1>Definitions</h1>
+  <h1>Word: <%= @item.word %></h1>
 </div>
 
 <form action="/definitions/:id" method="post">
@@ -11,9 +11,9 @@
   </div>
 
   <div id="output">
-    <h3>Definition(s):</h3><br>
+    <!-- <h3>Definition(s):</h3><br>
     <% @definition_list.each do |item| %>
       <h4><%= item.word %></h4>
-      <% end %>
+      <% end %> -->
   </div>
 </form>
