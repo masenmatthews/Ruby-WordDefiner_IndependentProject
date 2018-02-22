@@ -4,7 +4,7 @@ class Word
 
   def initialize(attributes)
     @word = attributes[:word]
-    @definition = []
+    @definition = attributes[:definition]
     @id = @@list.length + 1
   end
 

@@ -5,28 +5,31 @@ require('./lib/word')
 require('rspec')
 require('pry')
 
+# homepage load
 get('/') do
   @word_list = Word.list
   erb(:homepage)
 end
 
+# front page submit button
 post('/') do
-  word = params('add_word')
-  word_value = Word.new({:word => word})
+  @word = params.fetch("add_word")
+  word_value = Word.new(@word)
   word_value.save()
-  list_of_words = Word.list
-  @word_list = list_of_words
+  @word_list = Word.list
   erb(:homepage)
 end
 
+# definitions page load
 get("/definitions/:id")  do
-  @definition_list = Word.list
+  @word = params.fetch("add_word")
   @item = Word.find(params[:id])
   erb(:definition_input)
 end
 
+# push definitions to display
 post("/definitions/:id") do
-  definition = params('add_definition')
+  @definition = params.fetch('add_definition')
   @definition_value = Word.new({:word => definition})
   definition_value.save()
   list_of_definitions = Word.list
@@ -34,6 +37,7 @@ post("/definitions/:id") do
   erb(:definition_input)
 end
 
+# clear
 post('/clear') do
   Word.clear
   redirect '/'
