@@ -13,10 +13,10 @@ end
 
 # front page submit button
 post('/') do
-  @word = params.fetch("add_word")
-  word_value = Word.new(@word)
+  word = params.fetch("add_word")
+  word_value = Word.new(word)
   word_value.save()
-  @word_list = Word.list
+  @word_list = Word.list≠
   erb(:homepage)
 end
 
