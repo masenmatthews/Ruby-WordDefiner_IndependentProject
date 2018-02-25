@@ -27,11 +27,6 @@ class Word
     @@list.clear
   end
 
-  def add_definition(attributes)
-    @definition = Word.new(attributes)
-    @@list.push(@definition)
-  end
-
   def self.find(id)
     word_id = id.to_i()
     @@list.each do |word|

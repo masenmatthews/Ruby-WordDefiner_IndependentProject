@@ -5,7 +5,7 @@
 <form action="/" method="post">
   <div class="form-group">
     <h2>Input word</h2>
-    <input name="add_word" class="form-control" type="text" placeholder="Enter word"><br>
+    <input name="word" class="form-control" type="text" placeholder="Enter word"><br>
     <button type="add_word" class="btn btn-primary">Add word</button>
     <button class="btn btn-primary" id="clear" formaction='/clear'>Clear</button>
   </div>
@@ -13,8 +13,8 @@
   <div id="output">
     <h2>Words:</h2><br>
 
-     <% @word_list.each do |item| %>
-       <h4><a href='/definitions/<%=item.id() %>'><%= item.word %></a></h4>
+     <% @list.each do |value| %>
+       <h4><a href='/definitions/<%= value.id() %>'><%= value.word %></a></h4>
        <% end %>
 
   </div>
