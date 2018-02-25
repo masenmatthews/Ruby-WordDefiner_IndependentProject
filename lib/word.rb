@@ -11,9 +11,9 @@ class Word
     @id = @@list.length + 1
   end
 
-  def ==(new_word)
-    self.word().==(new_word.word()).&(self.definition().==(new_word.definition())).&(self.id().==(new_word.id()))
-  end
+  # def ==(new_word)
+  #   self.word().==(new_word.word()  ).&(self.definition().==(new_word.definition())).&(self.id().==(new_word.id()))
+  # end
 
   def self.all()
     @@list
@@ -33,10 +33,10 @@ class Word
   end
 
   def self.find(id)
-    item_id = id.to_i()
-    @@list.each do |item|
-      if item_id == item_id
-        return id
+    word_id = id.to_i()
+    @@list.each do |word|
+      if word.id == word_id
+        return word
       end
     end
   end
