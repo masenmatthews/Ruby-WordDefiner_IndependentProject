@@ -13,20 +13,24 @@ end
 
 # front page submit button
 post('/') do
-  word = params("word")
-  binding.pry
+  word = params["word"]
   value = Word.new({:word => word})
   value.save()
+  @list = Word.all()
   erb(:homepage)
 end
 
-# definitions page load
-get("/definitions/:id")  do
-  word = params("word")
-  @item = Word.find(params[:id])
+get('/definitions/:id') do
+  @list = Word.all()
   erb(:definitions)
 end
 
+post('/definitions/:id') do
+  definition = params["definition"]
+  definition = Word.new({:definition => definition})
+  @list = definition.save()
+  erb(:definitions)
+end
 
 # clear
 post('/clear') do

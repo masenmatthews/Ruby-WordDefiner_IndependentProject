@@ -5,17 +5,19 @@
 <form action="/" method="post">
   <div class="form-group">
     <h2>Input word</h2>
-    <input name="word" class="form-control" type="text" placeholder="Enter word"><br>
-    <button type="add_word" class="btn btn-primary">Add word</button>
+    <label for="word">Word</label>
+    <input name="word" id="word" class="form-control" type="text" placeholder="Enter word">
+    <br>
+    <button type="add" class="btn btn-primary">Add</button>
     <button class="btn btn-primary" id="clear" formaction='/clear'>Clear</button>
   </div>
 
   <div id="output">
     <h2>Words:</h2><br>
 
-     <% @list.each do |value| %>
-       <h4><a href='/definitions/<%= value.id() %>'><%= value.word %></a></h4>
-       <% end %>
+     <% @list.each do |x| %>
+       <h4><a href='/definitions/<%= x.id() %>'><%= x.word %></a></h4>
+     <% end %>
 
   </div>
 </form>
