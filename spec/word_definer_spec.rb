@@ -20,7 +20,9 @@ describe('Word') do
   describe('.clear') do
     it("clears list") do
       word = Word.new({:word => 'Dog', :definition => "A soft, friendly animal", :id => nil})
-      expect(word.clear()).to(eq([]))
+      word.save()
+      Word.clear()
+      expect(Word.all()).to(eq([]))
     end
   end
 

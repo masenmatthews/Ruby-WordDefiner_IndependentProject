@@ -7,22 +7,22 @@ require('pry')
 
 # homepage load
 get('/') do
-  @word_list = Word.list
+  @word_list = Word.all()
   erb(:homepage)
 end
 
 # front page submit button
 post('/') do
-  word = params.fetch("add_word")
-  word_value = Word.new(word)
+  word = params("add_word")
+  word_value = Word.new({:word => word})
   word_value.save()
-  @word_list = Word.list≠
+  @word_list = Word.all()
   erb(:homepage)
 end
 
 # definitions page load
 get("/definitions/:id")  do
-  @word = params.fetch("add_word")
+  word = params("add_word")
   @item = Word.find(params[:id])
   erb(:definition_input)
 end
@@ -32,7 +32,7 @@ post("/definitions/:id") do
   @definition = params.fetch('add_definition')
   @definition_value = Word.new({:word => definition})
   definition_value.save()
-  list_of_definitions = Word.list
+  list_of_definitions = Word.save
   @definitions_list = list_of_definitions
   erb(:definition_input)
 end

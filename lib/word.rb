@@ -16,12 +16,14 @@ class Word
   end
 
   def save
-    if (self.word)
       @@list.push(self)
     end
+
+  def self.all()
+    @@list
   end
 
-  def self.clear()
+  def self.clear
     @@list.clear
   end
 
