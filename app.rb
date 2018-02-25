@@ -5,14 +5,12 @@ require('./lib/word')
 require('rspec')
 require('pry')
 
-# homepage load
 get('/') do
   @list = Word.all()
   erb(:homepage)
 end
 
-# front page submit button
-post('/') do
+post('/definitions/:id') do
   word = params["word"]
   value = Word.new({:word => word})
   value.save()
@@ -25,14 +23,13 @@ get('/definitions/:id') do
   erb(:definitions)
 end
 
-post('/definitions/:id') do
+post('/definitions_input/:id') do
   definition = params["definition"]
   definition = Word.new({:definition => definition})
   @list = definition.save()
   erb(:definitions)
 end
 
-# clear
 post('/clear') do
   Word.clear
   redirect '/'

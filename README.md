@@ -19,14 +19,14 @@ This application allows the user to enter words into a text field, which will po
 
 3. New page features an input field for term definitions
   * Input example: "Dogs are soft, fluffy, four-legged pets."
-  * Output example: Definition printed on new oage
+  * Output example: Definition printed on new page
 
 ## Setup/Installation Requirements
 
 * _Clone GitHub repository to desktop or desired directory_
 * _Navigate to directory in terminal and launch site using the ruby app.rb command_
 * _Open browser and navigate to localhost URL_
-* _Alternatively, view the site using Haroku without installing it locally_
+* _Alternatively, view the site using Heroku without installing it locally_
 
 ## Known Bugs
 
@@ -37,7 +37,8 @@ Support inquiries, ideas, suggestions, and other contact inquiries can be direct
 ## Technologies Used
 
 This application utilizes the following technologies:
-
+  -Ruby
+  -Sinatra
 
 ### License
 

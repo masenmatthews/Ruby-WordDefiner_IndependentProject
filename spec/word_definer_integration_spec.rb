@@ -3,11 +3,11 @@ require('./app')
 Capybara.app = Sinatra::Application
 set(:show_exceptions, false)
 
-# describe('word is added to list when add button is clicked', {:type => :feature}) do
-#   it('adds input text to list') do
-#     visit('/')
-#     fill_in('add_word', :with => 'dog')
-#     click_button('Add word')
-#     expect(page).to have_content('dog')
-#   end
-# end
+describe('Inputted word is added to list', {:type => :feature}) do
+  it('adds clickable word to list and navigates to unique page') do
+    visit('/')
+    fill_in('word', :with => 'dog')
+    click_button('Add')
+    expect(page).to have_content('dog')
+  end
+end
