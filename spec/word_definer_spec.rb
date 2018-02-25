@@ -26,4 +26,12 @@ describe('Word') do
     end
   end
 
+  describe('.all') do
+    it('creates empty list') do
+      word = Word.new({:word => 'Dog', :definition => "A soft, friendly animal", :id => nil})
+      expect(Word.all()).to(eq([]))
+    end
+  end
+
+
 end

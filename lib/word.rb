@@ -15,13 +15,13 @@ class Word
     self.word().==(new_word.word()).&(self.definition().==(new_word.definition())).&(self.id().==(new_word.id()))
   end
 
-  def save
-      @@list.push(self)
-    end
-
   def self.all()
     @@list
   end
+
+  def save
+      @@list.push(self)
+    end
 
   def self.clear
     @@list.clear
